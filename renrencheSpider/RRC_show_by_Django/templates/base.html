@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>
+    {% block title %}
+
+    {% endblock %}
+</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Themeum">
+
+<!-- Include All Css -->
+<link rel="stylesheet" href="/static/renrenche/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/renrenche/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/renrenche/css/magnific-popup.css">
+<link rel="stylesheet" href="/static/renrenche/css/animate.css">
+<link rel="stylesheet" href="/static/renrenche/css/fonts.css">
+<link rel="stylesheet" href="/static/renrenche/css/preset.css">
+<link rel="stylesheet" href="/static/renrenche/css/style.css">
+<link rel="stylesheet" href="/static/renrenche/css/responsive.css">
+
+<!--[if lt IE 9]>
+	<script src="js/html5shive.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<!-- Header Area -->
+<header class="header-area inner-page">
+	<!-- Header Top Area -->
+	<section class="header-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-xs-12">
+					<div class="header-elements pull-right">
+						<ul class="social-icon pull-left">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+						<div class="language pull-left">
+							<a href="#">
+								<i class="icon-translator"></i>
+								<span style="font-size: 20px; color: silver">用户名</span>
+								<i class="fa fa-angle-down"></i>
+							</a>
+						</div>
+						<div class="login-or-signup pull-left">
+							<a href="{% url 'user:login' %}"><i class="icon-user"></i><span style="font-size: 20px; color: blue">登录</span></a>
+							<a href="{% url 'user:register' %}"><i class="icon-user"></i><span style="font-size: 20px; color: blue">注册</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /.header-top -->
+	<nav class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-xs-12">
+					<div class="logo pull-left">
+						<a href="index.html"><img alt="网页logo" src="/static/icon.jpg" style="width: 120px; height: 100px;"></a>
+					</div>
+					<ul class="main-menu pull-right">
+						<li class="menu-has-child">
+							<a href="index.html">菜单 1</a>
+							<ul>
+								<li><a href="index2.html">子菜单</a></li>
+								<li><a href="index3.html">子菜单</a></li>
+							</ul>
+						</li>
+						<li><a href="about-us.html">菜单 2</a></li>
+						<li class="menu-has-child">
+							<a href="#">菜单 3</a>
+							<ul>
+								<li>
+									<a href="event.html">子菜单</a>
+									<ul>
+										<li><a href="event-details.html">子菜单</a></li>
+									</ul>
+								</li>
+								<li><a href="routine.html">子菜单</a></li>
+								<li><a href="contact.html">子菜单</a></li>
+								<li><a href="404.html">子菜单</a></li>
+								<li><a href="coming-soon.html">子菜单</a></li>
+							</ul>
+						</li>
+						<li><a href="shortcode.html">菜单 3</a></li>
+						<li class="menu-has-child">
+							<a href="class.html">菜单 4</a>
+							<ul>
+								<li><a href="class-details.html">子菜单</a></li>
+							</ul>
+						</li>
+						<li class="menu-has-child">
+							<a href="blog.html">菜单 5</a>
+							<ul>
+								<li><a href="blog-details.html">子菜单</a></li>
+							</ul>
+						</li>
+						<li class="menu-has-child">
+							<a href="teacher.html">菜单 6</a>
+							<ul>
+								<li><a href="teacher-details.html">子菜单</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" id="search-pop"><i class="fa fa-search"></i></a>
+						</li>
+					</ul>
+					<div class="mobile-menu hidden-lg hidden-md hidden-sm">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search-area">
+			<form action="#" method="post">
+				<input type="search" name="search" placeholder="Enter your Search Text Here....">
+			</form>
+			<a href="#" class="search-close"><i class="fa fa-times"></i></a>
+		</div>
+	</nav>
+</header>
+<!-- /.header-area -->
+
+{% block content %}
+<!-- Breadcrumb  -->
+<section class="breadcrumb-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 text-center">
+				<div class="breadcrumb-content">
+					<h2>人人二手车数据展示</h2>
+					<ul>
+						<li><a href="index.html">首页</a><span>/</span></li>
+						<li>汽车</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /.breadcrumb-section  -->
+
+<!-- Classes Section -->
+<section class="classes-section-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div class="class-sort-btn-section">
+					<ul class="sort-btn pull-left">
+						<li class="active filter" data-filter="mix"><a href="#">全部({{ count }}条)</a></li>
+						<li class="filter" data-filter="kinder" id="kinder"><a href="#">分组 1</a></li>
+						<li class="filter" data-filter="play" id="play"><a href="#">分组 2</a></li>
+						<li class="filter" data-filter="primary" id="primary"><a href="#">分组 3</a></li>
+						<li class="filter" data-filter="story" id="story"><a href="#">分组 4</a></li>
+					</ul>
+					<form method="post" action="#" class="class-search pull-right">
+						<input type="search" name="search" placeholder="Search classes">
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div id="mixer">
+
+                <!-- 展示汽车 每页9 个 -->
+                {% for car in car_list %}
+				<div class="col-sm-4 col-xs-12 mix kinder play">
+					<div class="single-class">
+						<div class="class-img">
+							<img alt="汽车图片" src="{{ car.img_src }}">
+							<div class="class-hover">
+								<a href="{{ car.info_page_url }}" class="popup"><i class="icon-link"></i></a>
+							</div>
+						</div>
+						<div class="class-details">
+							<h3><a href="{{ car.info_page_url }}" style="color: black">{{ car.title }}</a></h3>
+							<p>{{ car.discount }}
+                                {% if car.tags %}
+                                -{{ car.tags }}
+                                {% endif %}
+                            </p>
+							<div class="clearfix">
+								<div class="class-meta pull-left">
+									<span>购车时间</span>
+									<p style="font-size: 10px">{{ car.year }}</p>
+								</div>
+								<div class="class-meta pull-left">
+									<span>里程数</span>
+									<p style="font-size: 10px">{{ car.mileage }}</p>
+								</div>
+								<div class="class-meta pull-left">
+									<span>首付</span>
+									<p style="font-size: 10px">{{ car.first_pay }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                {% endfor %}
+               <!-- 结束 -->
+
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 text-center">
+				<ul class="paginations">
+					<li><a href="#"><i class="icon-prev"></i></a></li>
+					<li><a href="#">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li><a href="#">10</a></li>
+					<li><a href="#"><i class="icon-next"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /.classes-section -->
+
+<!-- Facilities Section -->
+<section class="facility-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div class="title-with-icon text-center">
+					<img alt="" src="images/home1/facility.png">
+					<h2 class="title-2">School Fecilities</h2>
+					<p class="subtitle-2">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						eiusmod tempor incididunt ut labore et dolore magna <br>aliqua. Ut 
+						enim ad minim veniam, quis nostrud exercitation ullamco.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-xs-12 text-center">
+				<div class="single-facility">
+					<i class="icon-trophy"></i>
+					<h4>Pre-School Sports</h4>
+					<p>Lorem ipsum dolor sit amet,consectetur adipisicing.</p>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-12 text-center">
+				<div class="single-facility two">
+					<i class="icon-food"></i>
+					<h4>Healthy Meals</h4>
+					<p>Lorem ipsum dolor sit amet,consectetur adipisicing.</p>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-12 text-center">
+				<div class="single-facility three">
+					<i class="icon-lay"></i>
+					<h4>Multimedia Class</h4>
+					<p>Lorem ipsum dolor sit amet,consectetur adipisicing.</p>
+				</div>
+			</div>
+			<div class="col-sm-3 col-xs-12 text-center">
+				<div class="single-facility four">
+					<i class="icon-color"></i>
+					<h4>Music And Art Class</h4>
+					<p>Lorem ipsum dolor sit amet,consectetur adipisicing.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- /.facility-section -->
+{% endblock %}
+
+
+<!-- Footer Section -->
+<footer class="footer-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 col-xs-12 text-left">
+				<div class="about-widget">
+					<div class="footer-logo">
+						<a href="index.html"><img alt="" src="images/home1/footer-logo.png"></a>
+					</div>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+						eiusmod tempor incididunt ut labore.
+					</p>
+					<span>&copy; 2016 Kidzy School</span>
+					<ul class="social-icon">
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-6 col-xs-12 text-left">
+				<div class="footer-widget">
+					<h3>Qucik Link</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-6 col-xs-12 text-left">
+				<div class="footer-widget">
+					<h3>Classes</h3>
+					<ul>
+						<li><a href="#">Happy Kiddo</a></li>
+						<li><a href="#">Junior Lambs</a></li>
+						<li><a href="#">Master Mind</a></li>
+						<li><a href="#">Rabbit House</a></li>
+						<li><a href="#">Terrific Tigers</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="footer-widget">
+					<h3>Newsletter</h3>
+					<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+					<form action="#" method="post" class="subscribe-form">
+						<input type="email" name="email" placeholder="Your email Id">
+						<button class="primary-btn pull-right"><span>Submit</span></button>
+						<div class="clearfix"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /.footer-section -->
+
+<!-- Include All JavaScript -->
+<script src="/static/renrenche/js/jquery.min.js"></script>
+<script src="/static/renrenche/js/bootstrap.min.js"></script>
+<script src="/static/renrenche/js/mixIt.js"></script>
+<script src="/static/renrenche/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/renrenche/js/main.js"></script>
+<script src="/static/renrenche/js/html5shive.js"></script>
+</body>
+</html>
+
