@@ -17,6 +17,6 @@ qiniu==7.2.2
 redis==2.10.6
 requests==2.19.1
 SQLAlchemy==1.2.8
-urllib3==1.23
+urllib3==1.26.5
 Werkzeug==0.14.1
 WTForms==2.2.1
